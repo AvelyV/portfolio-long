@@ -1,0 +1,247 @@
+* {
+  background-color: black;
+  color: #fffbe9;
+  font-family: 'Bebas Neue', cursive;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header" "title title title" "picture main main" "project project project" "contact contact contact" "footer footer footer";
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  background-color: black;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+body #avely {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: picture;
+  margin: 15px;
+  margin-left: 100px;
+  width: 300px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  font-size: 30px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+nav .navbar {
+  background-color: black;
+  padding: 0;
+}
+
+nav .active:hover {
+  text-decoration: overline underline;
+  color: #98b796;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+  margin: 10px;
+  margin-bottom: 60px;
+  font-size: 22px;
+  max-width: 500px;
+}
+
+span {
+  color: #98b796;
+  font-size: 40px;
+}
+
+article {
+  margin-top: 200px;
+  max-width: 900px;
+}
+
+#projects {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: project;
+}
+
+#projects h1 {
+  margin: 40px;
+  margin-top: 120px;
+  font-size: 60px;
+}
+
+#projects .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
+}
+
+#projects .container .link img {
+  width: 400px;
+  height: 350px;
+  background-size: cover;
+}
+
+#projects .container .link .overlay {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.521);
+  position: absolute;
+  height: 350px;
+  width: 400px;
+}
+
+#projects .container .link .overlay:hover {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+#projects .container .info {
+  width: 400px;
+  height: 350px;
+}
+
+#projects .container .info h1 {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+#projects .container .info p {
+  margin-left: 45px;
+  margin-right: 30px;
+}
+
+#contact {
+  margin-top: 120px;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contact;
+}
+
+#contact h2 {
+  font-size: 60px;
+}
+
+#contact #check {
+  margin: 20px;
+  text-decoration: none;
+}
+
+#contact #check a {
+  text-decoration: none;
+  color: #98b796;
+}
+
+#contact #check #resume {
+  color: #98b796;
+}
+
+iframe {
+  width: 100%;
+  height: 250px;
+}
+
+footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 0;
+  color: grey;
+}
+
+footer div {
+  margin-left: 20px;
+  color: grey;
+}
+
+footer a {
+  margin: auto 15px;
+}
+
+footer a img {
+  height: 30px;
+  width: 30px;
+}
+
+#about-me {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  font-size: 60px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 414px) {
+  body {
+        grid-template-areas: "header header" "title title" "picture picture" "main main" "project project" "contact contact" "footer footer";
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  body img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+  body nav {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  body nav a {
+    margin: 5px;
+    margin-left: 40px;
+  }
+  body main {
+    margin: auto;
+  }
+  body main article {
+    font-size: 25px;
+  }
+  body main article span {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 768px) {
+  img {
+    width: 250px;
+    height: 250px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

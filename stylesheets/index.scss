@@ -32,6 +32,7 @@ body {
     background-color: $maincolor;
     max-width: 1024px;
     margin: 0 auto;
+    overflow-x: hidden;
     // picture of me in grayscale 
     #avely{
         grid-area: picture;
@@ -54,11 +55,13 @@ nav {
     font-family: 'Bebas Neue', cursive;
     background-color: $maincolor;
     border: 0;
-    .navbar {
-        background-color: $maincolor;
+    padding: 0;
+    .navbar-custom{
+        background-color: $maincolor!important;
         padding: 0;
         margin: 0;
     }
+    
 
     // on hover nav link will change colour and get an under- and overline
     .active:hover {
@@ -71,6 +74,7 @@ nav {
     font-size: 60px;
     width: 100%;
     margin-left: 40px;
+    margin-top: 20px;
 
 }
 
@@ -98,7 +102,7 @@ main {
     grid-area: project;
     h1 {
         // font-weight: 700;
-        margin: 40px;
+        margin: 20px;
         margin-top: 120px;
         font-size: 60px;
         // text-transform: uppercase;
@@ -113,8 +117,8 @@ main {
         // project card
         .link{
             .project-img{
-                width: 400px;
-                height: 350px;
+                width: 375px;
+                height: 325px;
                 background-size: cover;
                 }
             // overlay for the project cards
@@ -122,8 +126,8 @@ main {
                 display: inline-block;
                 background-color: rgba(0, 0, 0, 0.521);
                 position: absolute;
-                height: 350px;
-                width: 400px;
+                height: 325px;
+                width: 375px;
                 // when hovering project cards, overlay disappears
                 &:hover {
                     background-color: rgba(0, 0, 0, 0);
@@ -136,7 +140,7 @@ main {
             width: 400px;
             height: 350px;
             h1 {
-                margin-top: 0;
+                margin-top: 10px;
                 font-size: 40px;
             }
             p {
@@ -154,12 +158,15 @@ main {
 
 // contact
 #contact {
+    margin: 0;
+    padding: 0;
     margin-top: 120px;
     grid-area: contact;
     // display: flex;
     // flex-direction: column;
     // justify-content: space-between;
     // background-color: rgb(32, 33, 37);
+
 
     #check {
         margin: 20px;
@@ -173,6 +180,10 @@ main {
         }
         h2 {
             font-size: 60px;
+            margin-left: 20px;
+        }
+        p {
+            margin-left: 20px;
         }
 
     }
@@ -195,6 +206,7 @@ footer {
     align-items: center;
     margin: auto 0;
     color: grey;
+    padding: 0;
     div {
         margin-left: 20px;
         color: grey;
@@ -246,14 +258,15 @@ footer {
         margin: 0 0;
         article {
             font-size: 25px;
+            margin: 10px 20px;
 
             span {
                 font-size: 35px;
             }
         }
-        #avely {
-            margin: auto;
-        }
+    }
+    #avely {
+        margin: auto;
     }
     .project-img{
         width: 200px;
@@ -274,6 +287,7 @@ footer {
     img {
         width: 250px;
         height: 250px;
+    
     }
     #contact {
         margin-top: 10;

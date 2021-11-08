@@ -18,6 +18,7 @@ body {
   background-color: black;
   max-width: 1024px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 body #avely {
@@ -41,10 +42,11 @@ nav {
   font-family: 'Bebas Neue', cursive;
   background-color: black;
   border: 0;
+  padding: 0;
 }
 
-nav .navbar {
-  background-color: black;
+nav .navbar-custom {
+  background-color: black !important;
   padding: 0;
   margin: 0;
 }
@@ -58,6 +60,7 @@ nav .active:hover {
   font-size: 60px;
   width: 100%;
   margin-left: 40px;
+  margin-top: 20px;
 }
 
 main {
@@ -89,7 +92,7 @@ article {
 }
 
 #projects h1 {
-  margin: 40px;
+  margin: 20px;
   margin-top: 120px;
   font-size: 60px;
 }
@@ -111,8 +114,8 @@ article {
 }
 
 #projects .container .link .project-img {
-  width: 400px;
-  height: 350px;
+  width: 375px;
+  height: 325px;
   background-size: cover;
 }
 
@@ -120,8 +123,8 @@ article {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.521);
   position: absolute;
-  height: 350px;
-  width: 400px;
+  height: 325px;
+  width: 375px;
 }
 
 #projects .container .link .overlay:hover {
@@ -135,7 +138,7 @@ article {
 }
 
 #projects .container .info h1 {
-  margin-top: 0;
+  margin-top: 10px;
   font-size: 40px;
 }
 
@@ -145,6 +148,8 @@ article {
 }
 
 #contact {
+  margin: 0;
+  padding: 0;
   margin-top: 120px;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
@@ -164,6 +169,11 @@ article {
 
 #contact #check h2 {
   font-size: 60px;
+  margin-left: 20px;
+}
+
+#contact #check p {
+  margin-left: 20px;
 }
 
 iframe {
@@ -188,6 +198,7 @@ footer {
           align-items: center;
   margin: auto 0;
   color: grey;
+  padding: 0;
 }
 
 footer div {
@@ -229,11 +240,12 @@ footer a img {
   }
   body main article {
     font-size: 25px;
+    margin: 10px 20px;
   }
   body main article span {
     font-size: 35px;
   }
-  body main #avely {
+  body #avely {
     margin: auto;
   }
   body .project-img {

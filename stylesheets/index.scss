@@ -67,6 +67,13 @@ nav {
     }
 }
 
+.about-me {
+    font-size: 60px;
+    width: 100%;
+    margin-left: 40px;
+
+}
+
 //about me section
 main {
     grid-area: main;
@@ -78,7 +85,7 @@ main {
     }
     span {
         color: $accentcolor;
-        font-size: 40px;
+        font-size: 30px;
     }
     article {
         margin-top: 200px;
@@ -105,7 +112,7 @@ main {
         gap: 30px;
         // project card
         .link{
-            img{
+            .project-img{
                 width: 400px;
                 height: 350px;
                 background-size: cover;
@@ -143,6 +150,8 @@ main {
 
 }
 
+
+
 // contact
 #contact {
     margin-top: 120px;
@@ -151,9 +160,7 @@ main {
     // flex-direction: column;
     // justify-content: space-between;
     // background-color: rgb(32, 33, 37);
-    h2 {
-        font-size: 60px;
-    }
+
     #check {
         margin: 20px;
         text-decoration: none;
@@ -164,10 +171,10 @@ main {
             color: $accentcolor;
             // background-color: rgb(32, 33, 37);
         }
-
-        #resume {
-            color: $accentcolor;
+        h2 {
+            font-size: 60px;
         }
+
     }
 }
 
@@ -210,7 +217,7 @@ footer {
 
 //Phone design 414 * 736
 //iPhone 6/7/8 Plus
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 416px) {
     body {
         grid-template-areas:"header header"
                             "title title"
@@ -220,21 +227,23 @@ footer {
                             "contact contact"
                             "footer footer";
         grid-template-columns: repeat(2, 1fr);
-    img {
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        // overflow: hidden;
+    #about-me {
+        width: 150px;
+        // height: 200px;
         margin: auto; 
     }
-    nav {
-        margin-bottom: 10px;
-        font-size: 18px;
-        a {
-            margin: 5px;
-            margin-left: 40px;
-        }
-    }
+    // nav {
+    //     margin-bottom: 10px;
+    //     font-size: 18px;
+    //     a {
+    //         margin: 5px;
+    //         margin-left: 40px;
+    //     }
+    // }
     main {
-        margin: auto;
+        margin: 0 0;
         article {
             font-size: 25px;
 
@@ -242,17 +251,34 @@ footer {
                 font-size: 35px;
             }
         }
+        #avely {
+            margin: auto;
+        }
+    }
+    .project-img{
+        width: 200px;
+        height: 150px;
+        background-size: cover;
+        }
+    #contact {
+        margin: 10px;
     }
     }
+
 }
 
 //Tablet design 768 * 1024
 //Ipad
-@media only screen and (min-width: 414px) and (max-width: 768px) {
+@media only screen and (min-width: 417px) and (max-width: 768px) {
 
     img {
         width: 250px;
         height: 250px;
     }
+    #contact {
+        margin-top: 10;
+        padding: 0;
+    }
     
 }
+

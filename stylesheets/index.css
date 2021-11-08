@@ -54,6 +54,12 @@ nav .active:hover {
   color: #98b796;
 }
 
+.about-me {
+  font-size: 60px;
+  width: 100%;
+  margin-left: 40px;
+}
+
 main {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
@@ -67,7 +73,7 @@ main {
 
 span {
   color: #98b796;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 article {
@@ -104,7 +110,7 @@ article {
   gap: 30px;
 }
 
-#projects .container .link img {
+#projects .container .link .project-img {
   width: 400px;
   height: 350px;
   background-size: cover;
@@ -146,10 +152,6 @@ article {
   grid-area: contact;
 }
 
-#contact h2 {
-  font-size: 60px;
-}
-
 #contact #check {
   margin: 20px;
   text-decoration: none;
@@ -160,8 +162,8 @@ article {
   color: #98b796;
 }
 
-#contact #check #resume {
-  color: #98b796;
+#contact #check h2 {
+  font-size: 60px;
 }
 
 iframe {
@@ -211,27 +213,19 @@ footer a img {
   margin-top: 50px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 416px) {
   body {
         grid-template-areas: "header header" "title title" "picture picture" "main main" "project project" "contact contact" "footer footer";
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
-  body img {
-    width: 200px;
-    height: 200px;
+  body #about-me {
+    width: 150px;
     margin: auto;
-  }
-  body nav {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-  body nav a {
-    margin: 5px;
-    margin-left: 40px;
   }
   body main {
-    margin: auto;
+    margin: 0 0;
   }
   body main article {
     font-size: 25px;
@@ -239,12 +233,27 @@ footer a img {
   body main article span {
     font-size: 35px;
   }
+  body main #avely {
+    margin: auto;
+  }
+  body .project-img {
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+  }
+  body #contact {
+    margin: 10px;
+  }
 }
 
-@media only screen and (min-width: 414px) and (max-width: 768px) {
+@media only screen and (min-width: 417px) and (max-width: 768px) {
   img {
     width: 250px;
     height: 250px;
+  }
+  #contact {
+    margin-top: 10;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */
